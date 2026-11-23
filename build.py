@@ -11,6 +11,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import random
 import urllib.request
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -182,8 +183,8 @@ def render(theme: str, stats: dict) -> str:
     lines = info_lines(stats)
     fs, lh_info = 14, 20
     art_fs, lh_art = art.get("font_size", 14), art.get("line_height", 17)
-    art_x, art_y = 18, 34
-    info_x, info_y = 470, 34
+    art_x, art_y = 16, 30
+    info_x, info_y = 476, 34
     height = max(art_y + len(rows) * lh_art, info_y + len(lines) * lh_info) + 16
     width = 990
 
@@ -193,13 +194,14 @@ def render(theme: str, stats: dict) -> str:
         f'font-family="{FONT}" font-size="{fs}px">',
         "<style>",
         f".bg{{fill:{t['bg']}}} .text{{fill:{t['text']}}} .key{{fill:{t['key']}}} .value{{fill:{t['value']}}} .cc{{fill:{t['dots']}}} .cursor{{fill:{t['key']}}}",
-        ".ar{opacity:0;animation:rise .55s ease-out forwards}",
+        # each dot falls in from above with a little drift and settles (a soft overshoot on landing)
+        ".d{opacity:0;animation:land .9s cubic-bezier(.2,.85,.3,1.25) forwards}",
         ".ln{opacity:0;animation:type .55s steps(24,end) forwards}",
         ".cursor{animation:blink 1s steps(1,end) infinite}",
-        "@keyframes rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}",
+        "@keyframes land{0%{opacity:0;transform:translate(var(--dx),-46px)}55%{opacity:1}100%{opacity:1;transform:translate(0,0)}}",
         "@keyframes type{from{opacity:1;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}",
         "@keyframes blink{50%{opacity:0}}",
-        "@media (prefers-reduced-motion:reduce){.ar,.ln{animation:none;opacity:1}.cursor{animation:none}}",
+        "@media (prefers-reduced-motion:reduce){.d,.ln{animation:none;opacity:1}.cursor{animation:none}}",
         "</style>",
         "<defs>",
         # a band of light that sweeps down through the dotted portrait, forever
@@ -214,9 +216,19 @@ def render(theme: str, stats: dict) -> str:
         f'<rect class="bg" width="{width}" height="{height}" rx="15"/>',
         f'<g fill="url(#shine)" font-size="{art_fs}px">',
     ]
-    for i, row in enumerate(rows):
-        # non-breaking spaces: renderers may collapse ordinary leading spaces and misalign the portrait
-        out.append(f'<text class="ar" x="{art_x}" y="{art_y + i * lh_art}" style="animation-delay:{i * 0.05:.2f}s">{escape(row).replace(" ", " ")}</text>')
+    # One element per dot so each can land on its own; positions come from the grid, not the font,
+    # so the picture stays aligned whatever monospace font the viewer has.
+    cw = art.get("char_width", art_fs * 0.6)
+    rng = random.Random(7)
+    n_rows = len(rows)
+    for r, row in enumerate(rows):
+        for c, glyph in enumerate(row):
+            if glyph == " ":
+                continue
+            delay = 0.15 + (r / n_rows) * 1.7 + rng.uniform(0, 0.4)
+            dx = rng.uniform(-10, 10)
+            out.append(f'<text class="d" x="{art_x + c * cw:.1f}" y="{art_y + r * lh_art}" '
+                       f'style="animation-delay:{delay:.2f}s;--dx:{dx:.0f}px">{escape(glyph)}</text>')
     out.append("</g>")
     for i, segs in enumerate(lines):
         if not segs:
