@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="570" viewBox="0 0 990 570" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="14px">
+<style>
+.bg{fill:#f6f8fa} .text{fill:#24292f} .key{fill:#953800} .value{fill:#0a3069} .cc{fill:#c2cfde} .cursor{fill:#953800}
+.ar{opacity:0;animation:rise .55s ease-out forwards}
+.ln{opacity:0;animation:type .55s steps(24,end) forwards}
+.cursor{animation:blink 1s steps(1,end) infinite}
+@keyframes rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@keyframes type{from{opacity:1;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ar,.ln{animation:none;opacity:1}.cursor{animation:none}}
+</style>
+<defs>
+<linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="570">
+<stop offset="0" stop-color="#424a53"/><stop offset="0.40" stop-color="#424a53"/>
+<stop offset="0.5" stop-color="#0969da"/>
+<stop offset="0.60" stop-color="#424a53"/><stop offset="1" stop-color="#424a53"/>
+<animateTransform attributeName="gradientTransform" type="translate" from="0 -570" to="0 570" dur="6s" begin="1.8s" repeatCount="indefinite"/>
+</linearGradient>
+</defs>
+<rect class="bg" width="990" height="570" rx="15"/>
+<g fill="url(#shine)" font-size="12px">
+<text class="ar" x="18" y="34.0" style="animation-delay:0.00s">                                                            </text>
+<text class="ar" x="18" y="48.5" style="animation-delay:0.05s">                           ##*+===                          </text>
+<text class="ar" x="18" y="63.0" style="animation-delay:0.10s">                       +*#%#+*##*+*#****                    </text>
+<text class="ar" x="18" y="77.5" style="animation-delay:0.15s">                   **#**##+#@@@%@%%####**                   </text>
+<text class="ar" x="18" y="92.0" style="animation-delay:0.20s">                 +**####*#@@@%%@@@@@@%@%%*=                 </text>
+<text class="ar" x="18" y="106.5" style="animation-delay:0.25s">              *+*##*##%*%@@@@@@@@@@@@@@%%%*                 </text>
+<text class="ar" x="18" y="121.0" style="animation-delay:0.30s">             *#%**+*###@@@%%#*****#%@@@@@%@+                </text>
+<text class="ar" x="18" y="135.5" style="animation-delay:0.35s">             %%*%**#%@%#+=----:::::=+*@@@%%#*               </text>
+<text class="ar" x="18" y="150.0" style="animation-delay:0.40s">             %%%#@%++=-:::::-=====-::=*%##**#@              </text>
+<text class="ar" x="18" y="164.5" style="animation-delay:0.45s">             %@@@%=::::::---::::--====#@@@%#%@              </text>
+<text class="ar" x="18" y="179.0" style="animation-delay:0.50s">              @@@*--==++--.::=+###*+-=+%@@@%%               </text>
+<text class="ar" x="18" y="193.5" style="animation-delay:0.55s">               @@=+===*%#*:-*%%*++****=-@@@@@               </text>
+<text class="ar" x="18" y="208.0" style="animation-delay:0.60s">                %=-+*=#%%*-:#@@**%%%#+=-+%@#                </text>
+<text class="ar" x="18" y="222.5" style="animation-delay:0.65s">                #=::-==---..=**+==-::::-*#+#%               </text>
+<text class="ar" x="18" y="237.0" style="animation-delay:0.70s">                #=-:...::..-+=*%:.:::-==*%%*%               </text>
+<text class="ar" x="18" y="251.5" style="animation-delay:0.75s">                @+=-:.-::*=+@@#*::-=++=+###*                </text>
+<text class="ar" x="18" y="266.0" style="animation-delay:0.80s">                 #==--*#*#**#%%@@*==+*++#*-=                </text>
+<text class="ar" x="18" y="280.5" style="animation-delay:0.85s">                 %++=:*+=:-==***=-=+*++##@                  </text>
+<text class="ar" x="18" y="295.0" style="animation-delay:0.90s">                  %*=--::.-++=--=--=+*#%*                   </text>
+<text class="ar" x="18" y="309.5" style="animation-delay:0.95s">                   @%*+-::---=+++*++#%@#=                   </text>
+<text class="ar" x="18" y="324.0" style="animation-delay:1.00s">                    #%@%%#%#*%%%%%%@@%#*=@:.                </text>
+<text class="ar" x="18" y="338.5" style="animation-delay:1.05s">                    =+**####%%%@%@@@%#**=....               </text>
+<text class="ar" x="18" y="353.0" style="animation-delay:1.10s">                  .-#*+===++##%##****#=.......:.            </text>
+<text class="ar" x="18" y="367.5" style="animation-delay:1.15s">                 .-++@*+=-::-===+++*=........:::.....       </text>
+<text class="ar" x="18" y="382.0" style="animation-delay:1.20s">            ..:..:-==@#*++++++++++=:.........-::::........  </text>
+<text class="ar" x="18" y="396.5" style="animation-delay:1.25s">       ..-::.---*-:-=#@%*+=====-::-=+*=:....:::...::::.::..:</text>
+<text class="ar" x="18" y="411.0" style="animation-delay:1.30s">  ..:-:.----==:=++-:=--%%*++++::=++++==++==:::::.::.:::.:.:-</text>
+<text class="ar" x="18" y="425.5" style="animation-delay:1.35s">..:..-.=--=-:::+-:::..-:+%%*=-=*=---:--::::::::.-::...:---=-</text>
+<text class="ar" x="18" y="440.0" style="animation-delay:1.40s">.::..:+:::..:.-::::::.:=.-==+=-::..:::.....::..-::..:--:::::</text>
+<text class="ar" x="18" y="454.5" style="animation-delay:1.45s">.:::.=.....:.-::.:.::.::==-::.::..::.....::.:::::.:-:::::::-</text>
+<text class="ar" x="18" y="469.0" style="animation-delay:1.50s">.:-:::...::.::::::::.::::..::::.::.....:::.:=.=::::::-------</text>
+<text class="ar" x="18" y="483.5" style="animation-delay:1.55s">::-:-.::::.::::::.-:.=:...::-::::::::::::..+.--::.:::::::---</text>
+<text class="ar" x="18" y="498.0" style="animation-delay:1.60s">:-=::::.:::::::::::.==....:-::::::::::-::.-+-=:..:::.::-----</text>
+<text class="ar" x="18" y="512.5" style="animation-delay:1.65s">:---:-.::::::::::-.=+:...:-:...........:.:--=:...::::::..:::</text>
+</g>
+<text class="ln" x="470" y="34" xml:space="preserve" style="animation-delay:0.35s"><tspan class="text">navaneeth@bethini</tspan><tspan class="cc"> ——————————————————————————————————————————</tspan></text>
+<text class="ln" x="470" y="54" xml:space="preserve" style="animation-delay:0.42s"><tspan class="cc">. </tspan><tspan class="key">OS</tspan><tspan class="text">:</tspan><tspan class="cc"> .................................. </tspan><tspan class="value">Windows 11, Android</tspan></text>
+<text class="ln" x="470" y="74" xml:space="preserve" style="animation-delay:0.49s"><tspan class="cc">. </tspan><tspan class="key">Host</tspan><tspan class="text">:</tspan><tspan class="cc"> .................. </tspan><tspan class="value">Malla Reddy University, Hyderabad</tspan></text>
+<text class="ln" x="470" y="94" xml:space="preserve" style="animation-delay:0.56s"><tspan class="cc">. </tspan><tspan class="key">Kernel</tspan><tspan class="text">:</tspan><tspan class="cc"> ......................... </tspan><tspan class="value">B.Tech CSE · 2025 – 2029</tspan></text>
+<text class="ln" x="470" y="114" xml:space="preserve" style="animation-delay:0.63s"><tspan class="cc">. </tspan><tspan class="key">Role</tspan><tspan class="text">:</tspan><tspan class="cc"> ................... </tspan><tspan class="value">Creative Developer / AI Engineer</tspan></text>
+<text class="ln" x="470" y="154" xml:space="preserve" style="animation-delay:0.77s"><tspan class="cc">. </tspan><tspan class="key">Languages.Programming</tspan><tspan class="text">:</tspan><tspan class="cc"> ..... </tspan><tspan class="value">Python, C++, Java, JavaScript</tspan></text>
+<text class="ln" x="470" y="174" xml:space="preserve" style="animation-delay:0.84s"><tspan class="cc">. </tspan><tspan class="key">Languages.Web</tspan><tspan class="text">:</tspan><tspan class="cc"> .............. </tspan><tspan class="value">TypeScript, React, HTML, CSS</tspan></text>
+<text class="ln" x="470" y="194" xml:space="preserve" style="animation-delay:0.91s"><tspan class="cc">. </tspan><tspan class="key">Languages.Backend</tspan><tspan class="text">:</tspan><tspan class="cc"> ......................... </tspan><tspan class="value">Flask, SQLite</tspan></text>
+<text class="ln" x="470" y="234" xml:space="preserve" style="animation-delay:1.05s"><tspan class="cc">. </tspan><tspan class="key">Interests</tspan><tspan class="text">:</tspan><tspan class="cc"> ................... </tspan><tspan class="value">AI, Cybersecurity, Game Dev</tspan></text>
+<text class="ln" x="470" y="254" xml:space="preserve" style="animation-delay:1.12s"><tspan class="cc">. </tspan><tspan class="key">Goal</tspan><tspan class="text">:</tspan><tspan class="cc"> ........................... </tspan><tspan class="value">F1 Telemetry Engineering</tspan></text>
+<text class="ln" x="470" y="274" xml:space="preserve" style="animation-delay:1.19s"><tspan class="cc">. </tspan><tspan class="key">Building</tspan><tspan class="text">:</tspan><tspan class="cc"> ................. </tspan><tspan class="value">CINEMAX, RamGuard, ZENO, WiFiX</tspan></text>
+<text class="ln" x="470" y="294" xml:space="preserve" style="animation-delay:1.26s"><tspan class="cc">. </tspan><tspan class="key">Hackathons</tspan><tspan class="text">:</tspan><tspan class="cc"> ...................... </tspan><tspan class="value">MASQUERADE '26 — Winner</tspan></text>
+<text class="ln" x="470" y="334" xml:space="preserve" style="animation-delay:1.40s"><tspan class="text">- Contact </tspan><tspan class="cc">——————————————————————————————————————————————————</tspan></text>
+<text class="ln" x="470" y="354" xml:space="preserve" style="animation-delay:1.47s"><tspan class="cc">. </tspan><tspan class="key">Email</tspan><tspan class="text">:</tspan><tspan class="cc"> ..................... </tspan><tspan class="value">navaneethbethini004@gmail.com</tspan></text>
+<text class="ln" x="470" y="374" xml:space="preserve" style="animation-delay:1.54s"><tspan class="cc">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="text">:</tspan><tspan class="cc"> .... </tspan><tspan class="value">linkedin.com/in/navaneeth-bethini-381a94377</tspan></text>
+<text class="ln" x="470" y="394" xml:space="preserve" style="animation-delay:1.61s"><tspan class="cc">. </tspan><tspan class="key">Portfolio</tspan><tspan class="text">:</tspan><tspan class="cc"> ...................... </tspan><tspan class="value">nanichowdary04.github.io</tspan></text>
+<text class="ln" x="470" y="434" xml:space="preserve" style="animation-delay:1.75s"><tspan class="text">- GitHub Stats </tspan><tspan class="cc">—————————————————————————————————————————————</tspan></text>
+<text class="ln" x="470" y="454" xml:space="preserve" style="animation-delay:1.82s"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan><tspan class="text">:</tspan><tspan class="cc"> .. </tspan><tspan class="value">11 {Contributed: 0}</tspan><tspan class="text"> | </tspan><tspan class="key">Stars</tspan><tspan class="text">:</tspan><tspan class="cc"> .................. </tspan><tspan class="value">0</tspan></text>
+<text class="ln" x="470" y="474" xml:space="preserve" style="animation-delay:1.89s"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan><tspan class="text">:</tspan><tspan class="cc"> .............. </tspan><tspan class="value">26</tspan><tspan class="text"> | </tspan><tspan class="key">Followers</tspan><tspan class="text">:</tspan><tspan class="cc"> .............. </tspan><tspan class="value">0</tspan></text>
+<text class="ln" x="470" y="494" xml:space="preserve" style="animation-delay:1.96s"><tspan class="cc">. </tspan><tspan class="key">Contributions (last year)</tspan><tspan class="text">:</tspan><tspan class="cc"> ............................ </tspan><tspan class="value">37</tspan></text>
+<text class="ln" x="470" y="534" xml:space="preserve" style="animation-delay:2.10s"><tspan class="value">navaneeth@bethini</tspan><tspan class="text">:</tspan><tspan class="key">~</tspan><tspan class="text">$ </tspan><tspan class="cursor">▋</tspan></text>
+</svg>
